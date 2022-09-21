@@ -1,0 +1,12 @@
+amazon_ami = "ami-078e13ebe3b027f1c"
+my_access_cidr =  "217.213.74.72/32"
+ingressrules = [8080, 22, 80, 443]
+key_file_path = "../../Keys/Terraform.pem"
+key_name = "Terraform"
+linux_hostname = "jenkins_dev"
+linux_instance_type = "t3.micro"
+linux_username = "ec2-user"
+region = "eu-north-1"
+vpc_id = "vpc-033cd8e4f2e9xxxxx"
+subnet_id = "subnet-0947c9dad074xxxxx"
+sgname = "JenkinsIngressSG"
