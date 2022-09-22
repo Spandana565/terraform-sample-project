@@ -9,7 +9,7 @@ The steps to run this code are as follows:
   
 ## Install Terraform
 Terraform can be downloaded and installed from the official website:
-https://www.terraform.io/downloads.
+https://www.terraform.io/downloads. Note that one needs an AWS account with a S3 bucket to store the Terraform state file as well as a generated key-pair to access the virtual machine. One should take note of their VPC ID and Subnet ID for the subsequent steps.  
 
 ## Setting the Variables
 Within provider.tf, set the variables *region* to the region where the AWS VM should be created. See below for example. 
