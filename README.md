@@ -3,8 +3,9 @@ This codebase is an example of how to use Terraform to create an AWS EC2 instanc
 
 The steps to run this code are as follows:
 - Install Terraform 
-- Set the variables in the .tf files and .tfvar files.
+- Set the variables in the .tf files and .tfvar files
 - Run Terraform
+- Run Jenkins or the web application as desired
   
 ## Install Terraform
 Terraform can be downloaded and installed from the official website:
@@ -14,14 +15,14 @@ https://www.terraform.io/downloads.
 Within provider.tf, set the variables *region* to the region where the AWS VM should be created. See below for example. 
 
 <pre><code>
-  region  = "eu-north-1"
+region  = "eu-north-1"
 </code></pre> 
 
 Within terraform.tfvar, set the variable *amazon_ami* to point to a sample Amazon Machine Image (AMI) to create a VM. The variable *my_access_cidr* should be set to your public IP address. The variable *key_file_path* should be set to the location of the AWS keypair. The variable *region* should be same as the *region* variable in provider.tf and should point to the region where the AWS VM should be created. The variable *vpc_id* and *subnet_id* to the Virtual Private Cloud (VPC) ID and Subnet ID, respectively. 
 
 <pre><code>
 amazon_ami = "ami078e13ebe3b027f1c"
-my_access_cidr =  "217.213.74.72/32"
+my_access_cidr =  "217.xxx.xx.xx/32"
 key_file_path = "../../Keys/Terraform.pem"
 key_name = "Terraform"
 region = "eu-north-1"
@@ -32,8 +33,8 @@ subnet_id = "subnet-0947c9dad074xxxxx"
 Within backend.tf, details about the S3 bucket used to store the Terraform State file *terraform.tfstate* should be specified. The name of the bucket should be assigned to *bucket* and the *region* variable chosen to be same as *region* variable specified in previously mentioned files. 
 
 <pre><code>
-    bucket = "terraformxxxx"
-    region = "eu-north-1"
+bucket = "terraformxxxx"
+region = "eu-north-1"
 </code></pre>
 
 ## Running Terraform
@@ -45,3 +46,28 @@ terraform init
 terraform plan
 terraform apply
 </code></pre>
+
+## Running Jenkins
+
+In a browser, preferably google chrome, enter the public ip address (my_access_cidr) and we can run Jenkins on port 8080, click enter.
+
+<pre><code>
+http://217.21x.xx.xx:8080
+</code></pre>
+
+## Running Web Application
+
+In a browser, preferably google chrome, enter the public ip address (my_access_cidr) using http, click enter.
+
+<pre><code>
+http://217.21x.xx.xx
+</code></pre>
+
+
+
+
+
+
+
+
+
