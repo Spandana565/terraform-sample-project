@@ -1,5 +1,5 @@
 amazon_ami = "ami-078e13ebe3b027f1c"
-my_access_cidr =  "217.213.74.72/32"
+my_access_cidr =  "217.xxx.xx.xx/32"
 ingressrules = [8080, 22, 80, 443]
 key_file_path = "../../Keys/Terraform.pem"
 key_name = "Terraform"
