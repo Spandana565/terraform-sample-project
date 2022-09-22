@@ -52,7 +52,7 @@ terraform apply
 In a browser, preferably google chrome, enter the public ip address (my_access_cidr) and we can run Jenkins on port 8080, click enter.
 
 <pre><code>
-http://217.21x.xx.xx:8080
+http://217.xxx.xx.xx:8080
 </code></pre>
 
 ## Running Web Application
@@ -60,7 +60,7 @@ http://217.21x.xx.xx:8080
 In a browser, preferably google chrome, enter the public ip address (my_access_cidr) using http, click enter.
 
 <pre><code>
-http://217.21x.xx.xx
+http://217.xxx.xx.xx
 </code></pre>
 
 
